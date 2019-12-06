@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { PlayerCards } from "./components/PlayerCards";
 import "./App.css";
+import { NavBar } from "./components/NavBar";
 
 class App extends React.Component {
   state = {
@@ -18,11 +19,13 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <h1>Most Searched Womans Soccer Players</h1>
+          <NavBar />
         </header>
-        {this.state.data.map(i => (
-          <PlayerCards key={i.id} data={i} />
-        ))}
+        <section className="card-container">
+          {this.state.data.map(i => (
+            <PlayerCards key={i.id} data={i} />
+          ))}
+        </section>
       </div>
     );
   }

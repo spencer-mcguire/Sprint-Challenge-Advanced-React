@@ -2,9 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-* {
-  box-sizing: border-box;
-}
+
 html,
 body,
 div,
@@ -110,13 +108,6 @@ section {
 body {
   line-height: 1;
 }
-h1 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
 ol,
 ul {
   list-style: none;
@@ -136,20 +127,103 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* General Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
 p {
-  margin: 0;
-  padding: 0;
+  font-size: 1.2rem;
+  margin-top: 7%;
 }
 
 header {
   text-align: center;
 }
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .player {
   display: flex;
-  justify-content: space-between;
-  width: 20%;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  width: 5%;
+  text-align: center;
   border: 1px solid black;
   padding: 0.5%;
   margin: 20px;
+}
+
+.navbar {
+  align-items: center;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  padding: 0 3%;
+  width: 100%;
+  -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+}
+
+.dark-mode__toggle {
+  background: papayawhip;
+  border-radius: 50px;
+  border: 1px solid black;
+  height: 20px;
+  position: relative;
+  width: 40px;
+}
+
+.toggle {
+  background: #f68819;
+  border-radius: 50px;
+  height: 18px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 20px;
+}
+
+.toggled {
+  left: 18px;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #313843;
 }
