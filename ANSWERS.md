@@ -1,4 +1,4 @@
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+- [ ] Why would you use class component over function components (removing hooks from the question)? - Class components allow you to hold and manipulate not only the lifecycle of the component but also the state of some data. FYI hooks are better.
+- [ ] Name three lifecycle methods and their purposes. - componentDidMount - allows you to set state or make calls to an API - componentDidUpdate - allows you to update the component after the initial render - componentDidUnmount - helps stop memory leaks, cancels listeners and subscriptions
+- [ ] What is the purpose of a custom hook? - Help keep code DRY! This way that same hook can be used across the app without re writing it
+- [ ] Why is it important to test our apps? - The code you write is experienced by more than just the end user. Therefore, tests are put in place not to test the code but mainly the use case of said code. They are set in place for checks and balances as code changes to make sure the app doesnt break when changes happen.
