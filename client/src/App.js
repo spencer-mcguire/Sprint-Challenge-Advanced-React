@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { PlayerCards } from "./components/PlayerCards";
-import "./App.css";
 import { NavBar } from "./components/NavBar";
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -18,10 +18,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header>
+        <header data-testid="header">
           <NavBar />
         </header>
-        <section className="card-container">
+        <section className="card-container" data-testid="card-container">
           {this.state.data.map(i => (
             <PlayerCards key={i.id} data={i} />
           ))}
